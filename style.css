@@ -1,0 +1,232 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --rojo: #e8505b;
+    --blanco: #ffffff;
+    --negro: #000;
+    --gris-osc: #455a64;
+    --gris-clar: #eceeef;
+    --fuente-principal: 'Roboto', sans-serif;
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------Con esto dividire las secciones de la pagina------------------------------------- */
+.seccion {
+    padding: 0 20%;
+    margin: 30px 0;
+}
+/* ---------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------HEADER------------------------------------------------------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0;
+}
+
+
+/* header */img {
+    /* width: 200px;
+    height: 100px; */
+    height: 100%;
+}
+
+.header-logo {
+    height: 60px;
+}
+
+body {
+    background-color: var(--blanco);  /* No cambia nada, pero por sea casao :v */
+    /* padding: 0 20%; */
+    font-family: var(--fuente-principal);
+}
+
+.list {
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+    color: var(--negro);
+}
+
+header ul {
+    display: flex;
+    gap: 30px;
+}
+
+nav {
+    font-weight: 700;
+}
+/* ---------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------BOTONES------------------------------------------------------- */
+.boton {
+    border-radius: 10px;
+    font-weight: 700;
+    border: 0px;
+    padding: 10px 20px;
+}
+
+.boton-r {
+    background-color: var(--rojo);
+    color: var(--blanco);
+}
+
+.boton-n {
+    width: 100%;
+    color: var(--blanco);
+    background-color: var(--gris-osc);
+    /* margin: 20px 0; */ /* Movido a su propia funcion para que no interfiera con el grid y se pueda reciclar */
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+/* ------------------------------------------------DELIVERY---------------------------------------------------- */
+.seccion-delivery {
+    display: flex;
+    gap: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.seccion-delivery h2 {
+    margin: 55px 0;
+}
+
+.form-container {
+    width: 50%;
+    background-color: var(--rojo);
+    padding: 40px;
+    color: var(--blanco);
+}
+
+.form-delivery label{
+    display: block;
+    margin: 5px 0;
+    color: var(--blanco);
+    font-size: 12px;
+}
+
+.form-delivery input{
+    width: 100%;
+    border-color: var(--blanco);
+    border: 0px;
+    padding: 10px;
+    font-size: 10px;
+}
+.form-delivery button {
+    margin: 20px 0;
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------FUNCIONAMIENTO---------------------------------------------------------- */
+.seccion-funcionamiento {
+    text-align: center;
+    background-color: var(--rojo);
+    color: var(--blanco);
+}
+
+.seccion-funcionamiento > div {
+    padding-top: 40px;
+}
+
+.func-pasos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card-item {
+    height: 500px;
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* -----------------------------------------------TESTIMONIOS----------------------------------------------------- */
+.testimonios {
+    margin: 40px 0;
+    display: grid;
+    grid-template-columns: repeat(5, 200px);
+    grid-template-rows: repeat(2, 220px);
+    justify-content: center;
+    gap: 10px;
+}
+
+.testimonios > div {
+    padding: 20px;
+}
+
+.comment-1 {
+    grid-column: 1/4;
+}
+.comment-3 {
+    grid-column: 5/6;
+    grid-row: 1/3;
+}
+.comment-4 {
+    grid-column: 1/3;
+}
+.comment-5 {
+    grid-column: 3/5;
+}
+
+.comment{
+    display: flex;
+    /* Esto es para que los elementos pasen a la siguiente linea, entonces hare que el texto aparezca abajo haciendo que sea 100% */
+    /* flex-wrap: wrap; */
+
+    /* Mejor puse a ambos en un contenedor con flex y deje al texto afuera, pero funciona de ambas formas */
+}
+
+.comment-img {
+    /* max-height: 90px; */
+    width: 100%;
+    max-width: 90px;
+    /* min-height: 20px; */
+    min-width: 60px;
+    aspect-ratio: 1 / 1;
+    flex-shrink: 1;
+    overflow: hidden;
+    /* Tuve que hacer que la imagen se adaptara a ciertos tamaños, por lo que este border radius ya no me ayuda, lo regrese al img (Se veia raro en tamaños pequeños) */
+    /* border-radius: 50%; */
+}
+/* Con el overflow hidden me ahorro de modificar la imagen */
+.comment-img > img {
+     border-radius: 50%;
+     max-width: 100%;
+     height: auto;
+}
+
+.puntuacion{
+    padding-left: 10px;
+    /* Esto es para que el nombre y puntuacion se centren en el eje vertical */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+.puntuacion img {
+    /* max-height: 30px; */
+    max-width: 100%;
+    height: auto;
+}
+
+.comentario-text{
+    width: 100%;
+    display: block;
+    margin: 10px;
+    box-sizing: border-box;
+    /* Anulamos el font-weight de boton (Funcion reciclada) */
+    font-weight: 400;
+    font-size: 18px;
+}
+
+h3 {
+    font-weight: 500;
+}
