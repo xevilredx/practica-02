@@ -90,7 +90,12 @@ nav {
 /* ------------------------------------------------DELIVERY---------------------------------------------------- */
 .seccion-delivery {
     display: flex;
+    justify-content: center;
     gap: 35px;
+}
+
+.seccion-delivery div {
+    flex: 1;
 }
 
 h2 {
@@ -259,6 +264,7 @@ h3 {
     grid-template-columns: repeat(2, 500px);
     grid-template-rows: repeat(5, 280px);
     gap: 40px;
+    justify-content: center;
 }
 
 .restaurant-box {
