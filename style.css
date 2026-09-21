@@ -16,8 +16,8 @@
 /* ---------------------------------------------------------------------------------------------------- */
 /* -------------------------------------------Con esto dividire las secciones de la pagina------------------------------------- */
 .seccion {
-    padding: 0 20%;
-    margin: 30px 0;
+    padding: 30px 20%;
+    /* margin: 30px 0; */
 }
 /* ---------------------------------------------------------------------------------------------------- */
 /* ---------------------------------------------HEADER------------------------------------------------------- */
@@ -25,7 +25,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 30px 0;
+    /* margin: 30px 0; */
 }
 
 
@@ -33,6 +33,8 @@ header {
     /* width: 200px;
     height: 100px; */
     height: 100%;
+    /* width: 100%; */
+    object-fit: contain;
 }
 
 .header-logo {
@@ -88,17 +90,18 @@ nav {
 /* ------------------------------------------------DELIVERY---------------------------------------------------- */
 .seccion-delivery {
     display: flex;
-    gap: 20px;
+    gap: 35px;
 }
 
 h2 {
     text-align: center;
     font-size: 30px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .seccion-delivery h2 {
-    margin: 55px 0;
+    margin-top: 30px;
+    margin-bottom: 65px;
 }
 
 .form-container {
@@ -106,6 +109,8 @@ h2 {
     background-color: var(--rojo);
     padding: 40px;
     color: var(--blanco);
+    width: 500px;
+    height: 430px;
 }
 
 .form-delivery label{
@@ -134,11 +139,17 @@ h2 {
     color: var(--blanco);
 }
 
-.seccion-funcionamiento > div {
-    padding-top: 40px;
+/* .seccion-funcionamiento h2 {
+    font-size: 25px;
+} */
+
+.seccion-funcionamiento span {
+    font-size: 13px;
+    font-weight: 450;
 }
 
 .func-pasos{
+        padding-top: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
@@ -146,8 +157,8 @@ h2 {
 .card-item {
     height: 500px;
 }
-
 /* ---------------------------------------------------------------------------------------------------- */
+
 /* -----------------------------------------------TESTIMONIOS----------------------------------------------------- */
 .testimonios {
     margin: 40px 0;
@@ -229,4 +240,130 @@ h2 {
 
 h3 {
     font-weight: 500;
+}
+/* ---------------------------------------------------------------------------------------------------- */
+
+/* -----------------------------------------------RESTAURANTES----------------------------------------------------- */
+.seccion-restaurantes {
+    background-color: var(--gris-clar);
+    color: var(--gris-osc);
+}
+
+.seccion-restaurantes h2 {
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+
+.restaurantes {
+    display: grid;
+    grid-template-columns: repeat(2, 500px);
+    grid-template-rows: repeat(5, 280px);
+    gap: 40px;
+}
+
+.restaurant-box {
+    background-color: var(--blanco);
+    display: flex;
+    padding: 35px;
+    box-shadow: rgba(14, 30, 37, 0.15) 0px 2px 16px 0px;
+    border-radius: 10px;
+}
+
+.rest-img {
+    width: 35%;
+    padding-right: 35px;
+}
+
+.rest-img img {
+    width: 100%;
+}
+
+.rest-perfil {
+    width: 65%;
+    box-sizing: border-box;
+}
+
+.rest-perfil div {
+    height: 15%;
+    padding: 3px 0;
+}
+
+.restaurant-box h3 {
+    color: var(--rojo);
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.restaurant-box p {
+    margin-top: 15px;
+    font-size: 15px;
+}
+/* ---------------------------------------------------------------------------------------------------- */
+
+/* ----------------------------------------------INFORMACION------------------------------------------------------ */
+
+.seccion-informacion h2 {
+    margin-top: 15px;
+    margin-bottom: 35px;
+}
+
+.seccion-informacion {
+    color: var(--gris-osc);
+}
+
+.trabaja-nosotros{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+/* Añadirle un width a ambos objetos del flex parece arreglar el problema */
+.trabaja-nosotros div{
+    width: 50%;
+}
+
+.trabaja-nosotros p {
+    padding: 30px 0;
+    font-size: 17px;
+}
+
+.trabaja-nosotros img {
+    max-width: 100%;
+}
+/* ---------------------------------------------------------------------------------------------------- */
+
+/* ---------------------------------------------FOOTER------------------------------------------------------- */
+.footer-info {
+    background-color: var(--gris-osc);
+    color: var(--blanco);
+    display: flex;
+    gap: 15px;
+}
+
+.footer-info > div {
+    flex: 1;
+}
+
+.footer-info h2 {
+    text-align: left;
+    margin: 20px 0;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.footer-info li {
+    margin: 6px;
+}
+.footer-info .link {
+    color: var(--blanco);
+}
+
+.footer-derechos {
+    background-color: var(--rojo);
+    color: var(--blanco);
+    padding: 15px;
+    text-align: center;
 }
